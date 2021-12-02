@@ -18,15 +18,11 @@ function chartCourse(information){
 
         if(information[i].includes("down")){
             aim += Number(information[i][information[i].length -1 ]);
-            yAxis += Number(information[i][information[i].length -1 ]);
         }
 
         if(information[i].includes("up")){
             aim -= Number(information[i][information[i].length -1 ]);
-            yAxis -= Number(information[i][information[i].length -1 ]);
         }
-
-        console.log("Current Loop: " + i , ",horizontal: " + xAxis, ",depth: " + yAxis, ",Aim: " + aim, ",Answer: " + xAxis * yAxis);
 
     }
 
@@ -35,6 +31,6 @@ function chartCourse(information){
 
 }
 
-console.log("Test Data: ", chartCourse(testData));
+//console.log("Test Data: ", chartCourse(testData));
 
-//console.log("Ex2: ", chartCourse(course));
+console.log("Ex2: ", chartCourse(course));
