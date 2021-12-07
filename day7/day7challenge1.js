@@ -35,9 +35,11 @@ function absoluteDifference(array, argument) {
 
     let reducer = (a, b) => a + b;
 
-    return array.map((e => {
-        return e = Math.abs(e, argument);
-    })).reduce(reducer);
+    let mapped = array.map((e => {
+        return e = Math.abs(e - argument);
+    }))
+
+    return mapped.reduce(reducer);
      
 
 }
@@ -45,6 +47,8 @@ function absoluteDifference(array, argument) {
 console.log(absoluteDifference([1,2,3,4,5], 2))
 
 console.log(allignCrabSubmarines(testData));
+
+console.log(allignCrabSubmarines(crabSubs));
 
 /* function allignCrabSubmarines(data){
 
@@ -58,13 +62,13 @@ console.log(allignCrabSubmarines(testData));
 
         if (i == 0) { 
             data.forEach((e) => {
-                return counter += Math.abs(e, checkNumber)
+                return counter += Math.abs(e - checkNumber)
             })
             fuelConsumption = counter;
         } 
 
         data.forEach((e) => {
-            return testJourney += Math.abs(e, checkNumber)
+            return testJourney += Math.abs(e - checkNumber)
         })
 
 
