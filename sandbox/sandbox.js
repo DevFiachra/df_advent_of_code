@@ -1,6 +1,6 @@
 function icecreamParlor(m, arr) {
         
-    //let flavourCombos = [];
+    let flavourCombos = [];
     
     for (let i = 0; i < arr.length; i++){
         

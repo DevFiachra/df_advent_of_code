@@ -89,7 +89,7 @@ function  binaryDiagnostic(data){
 
 
     let gammaRate = "";
-    let epsilonRate = "";
+   // let epsilonRate = "";
 
 
     for (let i = 0; i < data[0].length; i++) {
@@ -111,15 +111,19 @@ function  binaryDiagnostic(data){
 
         if (zero > one) {
             gammaRate += "0";
-            epsilonRate += "1";
+            //epsilonRate += "1";
         }
 
         if (one > zero) {
             gammaRate += "1";
-            epsilonRate += "0";
+            //epsilonRate += "0";
         }
 
     }
+
+    let epsilonRate = gammaRate.split("").map(e => {
+        return e === "1" ? "0" : "1";
+    }).join("")
 
     
     return toBinary(gammaRate) * toBinary(epsilonRate);
