@@ -3,13 +3,11 @@ let crabSubs =[1101,1,29,67,1102,0,1,65,1008,65,35,66,1005,66,28,1,67,65,20,4,0,
 let testData = [16,1,2,0,4,2,7,1,2,14];
 
 
-
 function allignCrabSubmarines(arr){
 
     let fuelConsumption = 0;
     let thisJourneysFuel = 0;
 
-   arr.sort((a,b)=> a - b)
 
     for (let i = Math.min(...arr); i <= Math.max(...arr); i++){
 
@@ -50,37 +48,3 @@ console.log(allignCrabSubmarines(testData));
 
 console.log(allignCrabSubmarines(crabSubs));
 
-/* function allignCrabSubmarines(data){
-
-    let fuelConsumption = 0;
-    let testJourney = 0;
-    let counter = 0;
-   
-    for (let i = 0; i < data.length; i++) {
-
-        let checkNumber = data[i];
-
-        if (i == 0) { 
-            data.forEach((e) => {
-                return counter += Math.abs(e - checkNumber)
-            })
-            fuelConsumption = counter;
-        } 
-
-        data.forEach((e) => {
-            return testJourney += Math.abs(e - checkNumber)
-        })
-
-
-        if (testJourney < fuelConsumption) {
-            fuelConsumption = testJourney
-        }
-
-        counter = 0;
-        testJourney = 0;
-    }
-
-    return fuelConsumption;
-
-}
-*/
